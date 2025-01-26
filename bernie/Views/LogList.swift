@@ -1,47 +1,56 @@
 //
-//  ContentView.swift
+//  PetEventList.swift
 //  bernie
 //
-//  Created by Michal Ruopp on 11/9/24.
+//  Created by Michal Ruopp on 11/10/24.
 //
 
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+
+struct LogList: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: false)],
         animation: .default)
     private var items: FetchedResults<Item>
-
+    
     var body: some View {
-        NavigationView {
+        VStack {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                Section("Items") {
+                    ForEach(items) { item in
+                        LogItemDetailView(item)
                     }
+                    .onDelete(perform: deleteItems)
                 }
-                .onDelete(perform: deleteItems)
+                .listRowBackground(Color.clear)
+                .listRowSeparator(.hidden)
             }
+            .scrollContentBackground(.hidden)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {
                     Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+//                        Label("Add Item", systemImage: "plus")
+                        NavigationLink {
+                            Text("The Link Text")
+                        }
+                        label: {
+                            Label("Add Item", systemImage: "plus")
+                        }
                     }
                 }
             }
-            Text("Select an item")
+            .navigationTitle("{Pet Name}'s Log")
         }
+//        .background(Color.blue)
     }
-
+    
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
@@ -72,17 +81,13 @@ struct ContentView: View {
             }
         }
     }
+
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
-struct ContentView_Previews: PreviewProvider {
+
+struct PetEventList_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        LogList().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

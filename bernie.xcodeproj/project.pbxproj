@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A724B8952CE01A74008BA7C9 /* bernieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A724B8942CE01A74008BA7C9 /* bernieApp.swift */; };
-		A724B8972CE01A74008BA7C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A724B8962CE01A74008BA7C9 /* ContentView.swift */; };
 		A724B8992CE01A74008BA7C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A724B8982CE01A74008BA7C9 /* Assets.xcassets */; };
 		A724B89C2CE01A74008BA7C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A724B89B2CE01A74008BA7C9 /* Preview Assets.xcassets */; };
 		A724B89E2CE01A74008BA7C9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A724B89D2CE01A74008BA7C9 /* Persistence.swift */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		A724B8912CE01A74008BA7C9 /* bernie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bernie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A724B8942CE01A74008BA7C9 /* bernieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bernieApp.swift; sourceTree = "<group>"; };
-		A724B8962CE01A74008BA7C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A724B8982CE01A74008BA7C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A724B89B2CE01A74008BA7C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A724B89D2CE01A74008BA7C9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -49,6 +47,13 @@
 		A724B8B42CE01A75008BA7C9 /* bernieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bernieUITests.swift; sourceTree = "<group>"; };
 		A724B8B62CE01A75008BA7C9 /* bernieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bernieUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A7DC15CC2D3C75CB001C34FB /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
+		A7DC15CD2D3C75D1001C34FB /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+		A7DC15CE2D3C75DB001C34FB /* ViewModels */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModels; sourceTree = "<group>"; };
+		A7DC15CF2D3C75F2001C34FB /* Services */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Services; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A724B88E2CE01A74008BA7C9 /* Frameworks */ = {
@@ -98,8 +103,11 @@
 		A724B8932CE01A74008BA7C9 /* bernie */ = {
 			isa = PBXGroup;
 			children = (
+				A7DC15CF2D3C75F2001C34FB /* Services */,
+				A7DC15CE2D3C75DB001C34FB /* ViewModels */,
+				A7DC15CD2D3C75D1001C34FB /* Views */,
+				A7DC15CC2D3C75CB001C34FB /* Models */,
 				A724B8942CE01A74008BA7C9 /* bernieApp.swift */,
-				A724B8962CE01A74008BA7C9 /* ContentView.swift */,
 				A724B8982CE01A74008BA7C9 /* Assets.xcassets */,
 				A724B89D2CE01A74008BA7C9 /* Persistence.swift */,
 				A724B89F2CE01A74008BA7C9 /* bernie.xcdatamodeld */,
@@ -147,6 +155,12 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A7DC15CC2D3C75CB001C34FB /* Models */,
+				A7DC15CD2D3C75D1001C34FB /* Views */,
+				A7DC15CE2D3C75DB001C34FB /* ViewModels */,
+				A7DC15CF2D3C75F2001C34FB /* Services */,
 			);
 			name = bernie;
 			productName = bernie;
@@ -265,7 +279,6 @@
 			files = (
 				A724B8A12CE01A74008BA7C9 /* bernie.xcdatamodeld in Sources */,
 				A724B89E2CE01A74008BA7C9 /* Persistence.swift in Sources */,
-				A724B8972CE01A74008BA7C9 /* ContentView.swift in Sources */,
 				A724B8952CE01A74008BA7C9 /* bernieApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
