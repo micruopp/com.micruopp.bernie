@@ -15,6 +15,7 @@
 		A724B8AB2CE01A75008BA7C9 /* bernieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A724B8AA2CE01A75008BA7C9 /* bernieTests.swift */; };
 		A724B8B52CE01A75008BA7C9 /* bernieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A724B8B42CE01A75008BA7C9 /* bernieUITests.swift */; };
 		A724B8B72CE01A75008BA7C9 /* bernieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A724B8B62CE01A75008BA7C9 /* bernieUITestsLaunchTests.swift */; };
+		A7DC15DE2D474E44001C34FB /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DC15DD2D474E3E001C34FB /* utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		A724B8B02CE01A75008BA7C9 /* bernieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bernieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A724B8B42CE01A75008BA7C9 /* bernieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bernieUITests.swift; sourceTree = "<group>"; };
 		A724B8B62CE01A75008BA7C9 /* bernieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bernieUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A7DC15DD2D474E3E001C34FB /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -103,6 +105,7 @@
 		A724B8932CE01A74008BA7C9 /* bernie */ = {
 			isa = PBXGroup;
 			children = (
+				A7DC15DD2D474E3E001C34FB /* utils.swift */,
 				A7DC15CF2D3C75F2001C34FB /* Services */,
 				A7DC15CE2D3C75DB001C34FB /* ViewModels */,
 				A7DC15CD2D3C75D1001C34FB /* Views */,
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7DC15DE2D474E44001C34FB /* utils.swift in Sources */,
 				A724B8A12CE01A74008BA7C9 /* bernie.xcdatamodeld in Sources */,
 				A724B89E2CE01A74008BA7C9 /* Persistence.swift in Sources */,
 				A724B8952CE01A74008BA7C9 /* bernieApp.swift in Sources */,

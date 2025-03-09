@@ -17,10 +17,13 @@ struct LogItemDetailView: View {
     
     var body: some View {
         NavigationLink {
+            Text(item.name ?? "The item name")
+                .font(.title)
+                .padding()
             Text("Item at \(item.timestamp!, formatter: itemFormatter)")
         }
         label: {
-            Text(item.timestamp!, formatter: itemFormatter)
+            LogListLabel(item: item)
         }
     }
 }
@@ -28,7 +31,8 @@ struct LogItemDetailView: View {
 private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
-    formatter.timeStyle = .medium
+    formatter.timeStyle = .short
+    sayHi()
     return formatter
 }()
 

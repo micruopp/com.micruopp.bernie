@@ -35,16 +35,21 @@ struct LogList: View {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
-//                        Label("Add Item", systemImage: "plus")
-                        NavigationLink {
-                            Text("The Link Text")
-                        }
-                        label: {
-                            Label("Add Item", systemImage: "plus")
-                        }
+                    NavigationLink(destination: NewLogItemView()) {
+                        Label("Add item", systemImage: "plus")
                     }
                 }
+//                ToolbarItem {
+//                    Button(action: addItem) {
+////                        Label("Add Item", systemImage: "plus")
+//                        NavigationLink {
+//                            Text("The Link Text")
+//                        }
+//                        label: {
+//                            Label("Add Item", systemImage: "plus")
+//                        }
+//                    }
+//                }
             }
             .navigationTitle("{Pet Name}'s Log")
         }
